@@ -21,20 +21,19 @@ const verbMessages = [
 
 //function that randomly selects an option from an array
 
-const randomChoice = (arr) =>  {
+const randomizer = (arr) =>  {
     let randomChoice = arr[Math.floor(Math.random() * arr.length)];
     return randomChoice;
 };
 
 
-
 //function that randomly selects an appropriate verb and message
 const formMessage = (arr) =>  {
-    let person = randomChoice(arr.person);
-    let message =  randomChoice(arr.messages);
+    let person = randomizer(arr.person);
+    let message =  randomizer(arr.messages);
     return `${person} ${arr.verb} ${message}`
 }
 
-console.log(formMessage(randomChoice(verbMessages)));
+console.log(formMessage(randomizer(verbMessages)));
 
 
